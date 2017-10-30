@@ -12,6 +12,8 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import {DishService} from "./services/dish.service";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {AppRoutingModule} from "./app-routing/app-routing.module";
+import {HomeComponent} from "./home/home.component";
 
 @NgModule({
   declarations: [
@@ -19,13 +21,15 @@ import { FooterComponent } from './footer/footer.component';
     MenuComponent,
     DishdetailComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
       BrowserAnimationsModule,
       MaterialModule,
-      FlexLayoutModule
+      FlexLayoutModule,
+      AppRoutingModule
   ],
   providers: [DishService],
   bootstrap: [AppComponent]
