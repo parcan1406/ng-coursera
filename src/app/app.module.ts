@@ -17,6 +17,8 @@ import {HomeComponent} from "./home/home.component";
 import {ContactComponent} from "./contact/contact.component";
 import {LeaderService} from "./services/leader.service";
 import {AboutComponent} from "./about/about.component";
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,16 +29,21 @@ import {AboutComponent} from "./about/about.component";
     FooterComponent,
     HomeComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,
+      BrowserModule,
       BrowserAnimationsModule,
       MaterialModule,
       FlexLayoutModule,
-      AppRoutingModule
+      AppRoutingModule,
+      FormsModule
   ],
   providers: [DishService, LeaderService],
+  entryComponents: [
+    LoginComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
